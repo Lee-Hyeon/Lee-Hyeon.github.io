@@ -76943,13 +76943,15 @@ i=B.h.k(a0.ki(m)+k)
 for(;B.b.u(q[p],i);)i=B.h.k(a0.ki(m)+k)
 q[p].push(i)}else if(J.c(m.h(n,b),"VARCHAR")){m=l-k+1
 h=a0.ki(m)+k
-for(g="",f=0;f<h;++f)g+=A.cT(a0.ki(26)+65)
+for(g="'",f=0;f<h;++f)g+=A.cT(a0.ki(26)+65)
+g+="'"
 for(;B.b.u(q[p],g);){h=a0.ki(m)+k
-for(g="",f=0;f<h;++f)g+=A.cT(a0.ki(26)+65)}q[p].push(g)}}else if(J.c(m.h(n,c),"CountUp"))q[p].push(B.h.k(o+k))
+for(g="'",f=0;f<h;++f)g+=A.cT(a0.ki(26)+65)
+g+="'"}q[p].push(g)}}else if(J.c(m.h(n,c),"CountUp"))q[p].push(B.h.k(o+k))
 else if(J.c(m.h(n,b),"INTEGER"))q[p].push(B.h.k(a0.ki(l-k+1)+k))
 else if(J.c(m.h(n,b),"VARCHAR")){h=a0.ki(l-k+1)+k
-for(g="",f=0;f<h;++f)g+=A.cT(a0.ki(26)+65)
-q[p].push(g)}}for(o=0;o<J.ag(a[r],d);++o){s+="INSERT INTO "+A.i(J.ag(a[r],"tableName"))+" VALUES ("
+for(g="'",f=0;f<h;++f)g+=A.cT(a0.ki(26)+65)
+q[p].push(g+"'")}}for(o=0;o<J.ag(a[r],d);++o){s+="INSERT INTO "+A.i(J.ag(a[r],"tableName"))+" VALUES ("
 for(p=0;p<J.ag(a[r],e);++p){if(p!==0)s+=", "
 s+=q[p][o]}s+=");  \n"}}return s},
 L(a){var s,r,q,p,o=this,n=null,m=o.c,l=o.XK(m),k=new A.aaq()
